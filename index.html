@@ -1,0 +1,375 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Jenica! 🐼💕</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --pink: #ffb6c9;
+    --light-pink: #fff0f5;
+    --dark-pink: #ff6f91;
+    --white: #ffffff;
+    --text: #684c5a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(135deg, #fff0f5, #ffe0eb, #fff5f8);
+    color: var(--text);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Floating hearts */
+.heart {
+    position: fixed;
+    bottom: -30px;
+    font-size: 20px;
+    animation: floatUp linear infinite;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.7;
+}
+
+@keyframes floatUp {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Main container */
+.container {
+    position: relative;
+    z-index: 1;
+    width: 90%;
+    max-width: 650px;
+    margin: 40px auto;
+    padding: 35px 25px;
+    background: rgba(255,255,255,0.85);
+    border: 3px solid white;
+    border-radius: 30px;
+    box-shadow: 0 15px 40px rgba(255,111,145,0.18);
+    text-align: center;
+    animation: appear 1s ease;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Panda */
+.panda {
+    font-size: 95px;
+    margin: 10px 0;
+    display: inline-block;
+    animation: pandaBounce 2s infinite ease-in-out;
+}
+
+@keyframes pandaBounce {
+    0%, 100% { transform: translateY(0) rotate(-5deg); }
+    50% { transform: translateY(-12px) rotate(5deg); }
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: clamp(2rem, 7vw, 3.5rem);
+    color: var(--dark-pink);
+    margin: 10px 0;
+    text-shadow: 2px 3px 0 #ffe0eb;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Panda decoration */
+.panda-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 40px;
+    margin: 20px 0;
+}
+
+.panda-row span {
+    animation: wiggle 2s infinite;
+}
+
+.panda-row span:nth-child(2) {
+    animation-delay: .3s;
+}
+
+.panda-row span:nth-child(3) {
+    animation-delay: .6s;
+}
+
+@keyframes wiggle {
+    0%, 100% { transform: rotate(0); }
+    50% { transform: rotate(12deg); }
+}
+
+/* Birthday message */
+.message {
+    background: #fff0f5;
+    padding: 25px;
+    border-radius: 22px;
+    margin: 25px 0;
+    line-height: 1.9;
+    border: 2px dashed #ffb6c9;
+}
+
+.message h2 {
+    color: var(--dark-pink);
+    margin-bottom: 12px;
+    font-size: 1.5rem;
+}
+
+.message p {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Buttons */
+button {
+    border: none;
+    padding: 14px 25px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #ff8fab, #ff6f91);
+    color: white;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin: 8px;
+    box-shadow: 0 5px 15px rgba(255,111,145,0.3);
+    transition: .3s;
+}
+
+button:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(255,111,145,0.4);
+}
+
+button:active {
+    transform: scale(.95);
+}
+
+/* Hidden surprise */
+#surprise {
+    display: none;
+    background: #fff0f5;
+    padding: 22px;
+    border-radius: 20px;
+    margin-top: 20px;
+    animation: appear .7s ease;
+    line-height: 1.8;
+}
+
+#surprise h2 {
+    color: var(--dark-pink);
+    font-family: 'Pacifico', cursive;
+    margin-bottom: 10px;
+}
+
+footer {
+    margin-top: 25px;
+    font-size: .9rem;
+    font-weight: 700;
+    color: #b77b91;
+}
+
+/* Confetti */
+.confetti {
+    position: fixed;
+    top: -20px;
+    z-index: 10;
+    pointer-events: none;
+    animation: confettiFall 3s linear forwards;
+}
+
+@keyframes confettiFall {
+    to {
+        transform: translateY(110vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+@media(max-width: 480px) {
+    .container {
+        margin: 20px auto;
+        padding: 25px 17px;
+    }
+
+    .panda {
+        font-size: 75px;
+    }
+
+    .message {
+        padding: 18px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="panda">🐼💕</div>
+
+    <p class="subtitle">A special little celebration for someone special...</p>
+
+    <h1>Happy Birthday Baby!</h1>
+
+    <h2>Jenica Detecio 🎂</h2>
+
+    <div class="panda-row">
+        <span>🐼</span>
+        <span>💗</span>
+        <span>🐼</span>
+    </div>
+
+    <div class="message">
+        <h2>Dear Jenica, 💌</h2>
+
+        <p>
+            Happy Birthday!! 🎉💕
+            <br><br>
+            I hope your special day is filled with happiness,
+            laughter, and love.
+            <br><br>
+            I'm willing to do everything to become the man that can love you the way you wanted because
+            you deserve all the wonderful things this world. 
+            has to offer.
+            <br><br>
+            Always remember that you are special,
+            appreciated, and worthy of every good thing. And I'm always here for you ALWAYS. 
+            <br><br>
+            Enjoy your day and keep smiling! 
+            Don't forget to take care of yourself. 💗
+        </p>
+    </div>
+
+    <p style="font-weight:700; margin:15px;">
+        I have a little surprise for you hihi... 👀
+    </p>
+
+    <button onclick="showSurprise()">
+        Open Your Surprise 🎁
+    </button>
+
+    <div id="surprise">
+        <div style="font-size:55px;">🐼💐🐼</div>
+
+        <h2>One More Thing...</h2>
+
+        <p>
+            Oten oten Jk... 
+           <br>
+            Mahal na mahal kita sa lahat 
+            lahat ILOVEYOUBABYYY
+            <br><br>
+            Ikaw nalang mahihiling kona             makasama hanggang dulo
+            <br><br>
+            Sending you the biggest panda hug ever! 🐼
+        </p>
+
+        <h2>With love,</h2>
+        <h2>Xan 💗</h2>
+    </div>
+
+    <footer>
+        Made with ♡ by Xan
+        <br>
+        For Jenica, with love. 🐼
+    </footer>
+
+</div>
+
+<script>
+
+// Create floating hearts
+const heartSymbols = ['💗', '💕', '💖', '♡', '🌸', '✨'];
+
+function createHeart() {
+    const heart = document.createElement('div');
+
+    heart.className = 'heart';
+    heart.textContent = heartSymbols[
+        Math.floor(Math.random() * heartSymbols.length)
+    ];
+
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.animationDuration = (5 + Math.random() * 5) + 's';
+    heart.style.fontSize = (15 + Math.random() * 20) + 'px';
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 10000);
+}
+
+setInterval(createHeart, 500);
+
+
+// Surprise button
+function showSurprise() {
+    const surprise = document.getElementById('surprise');
+
+    surprise.style.display = 'block';
+
+    surprise.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center'
+    });
+
+    createConfetti();
+}
+
+
+// Confetti effect
+function createConfetti() {
+    const symbols = ['💗', '🎉', '✨', '🌸', '💕'];
+
+    for (let i = 0; i < 45; i++) {
+        const confetti = document.createElement('div');
+
+        confetti.className = 'confetti';
+        confetti.textContent =
+            symbols[Math.floor(Math.random() * symbols.length)];
+
+        confetti.style.left = Math.random() * 100 + 'vw';
+        confetti.style.fontSize = (15 + Math.random() * 20) + 'px';
+        confetti.style.animationDuration =
+            (2 + Math.random() * 3) + 's';
+
+        document.body.appendChild(confetti);
+
+        setTimeout(() => confetti.remove(), 5000);
+    }
+}
+
+</script>
+
+</body>
+</html>
